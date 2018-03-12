@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameMAnager : MonoBehaviour {
+
 
 	private int width = 100;
 	private int height = 100;
@@ -19,11 +21,24 @@ public class GameMAnager : MonoBehaviour {
 	public GameObject parent;
 	private float[,,] HeightMaps;
 	private GameObject obj; 
-		
+	private Texture2D[] LayersText; 
+
+
 	void Start () {
 		HeightMaps = Generate3DNoise ();
-
+		LayersText = new Texture2D[10];
 	}
+	/*private void TextureGen()
+	{
+		Texture2D textur = new Texture2D (width, height);
+		for (int i =0;i<width;i++)
+		{
+			for (int j = 0; j < height; j++)
+			{
+
+			}
+		}
+	}*/
 	private void DeletCurrentMap()
 	{
 		for (int i =0;i< parent.transform.childCount;i++)
@@ -54,7 +69,7 @@ public class GameMAnager : MonoBehaviour {
 					;
 				}
 				obj.transform.SetParent (parent.transform);
-				obj.transform.position = new Vector3 (i-40, j-20, 0);
+				obj.transform.position = new Vector3 (i, j, 0);
 			}
 		}
 

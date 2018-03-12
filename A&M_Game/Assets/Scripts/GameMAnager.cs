@@ -6,7 +6,7 @@ public class GameMAnager : MonoBehaviour {
 
 	private int width = 100;
 	private int height = 100;
-	private float scale = 5;
+	private float scale = 7;
 	private int moveX;
 	private int moveY;
 
@@ -18,11 +18,12 @@ public class GameMAnager : MonoBehaviour {
 
 		
 	void Start () {
+
 	moveX = Random.Range (0, 1000);
 	moveY = Random.Range (0, 1000);
 	ShowMap ();
-
 	}
+
 	private void ShowMap()
 	{
 		GameObject obj = new GameObject ();
@@ -46,7 +47,7 @@ public class GameMAnager : MonoBehaviour {
 	}
 
 	void Update () {
-		
+
 	}
 		
 

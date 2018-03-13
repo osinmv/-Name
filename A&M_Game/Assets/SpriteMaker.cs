@@ -7,10 +7,10 @@ public class SpriteMaker : MonoBehaviour {
 
     SpriteRenderer rend;
 
-    private int width = 160;
-    private int height = 160;
+    private int width = 1600;
+    private int height = 1600;
     private int depth = 35;
-    private float scale = 3;
+    private float scale = 7;
     private int moveX;
     private int moveY;
     private float[,,] HeightMaps;
@@ -27,12 +27,12 @@ public class SpriteMaker : MonoBehaviour {
     }
 
     void renderist() {
-        Texture2D tex = new Texture2D(width, height);
-        Color[] colorArray = new Color[tex.width * tex.height];
+        Texture2D tex = new Texture2D(100, 100);
+        Color[] colorArray = new Color[10000];
 
-        for (int i = 0; i < tex.width; i++)
+        for (int i = 0; i < 100; i++)
         {
-            for (int j = 0; j < tex.height; j++)
+            for (int j = 0; j < 100; j++)
             {
                 //if (0 <= HeightMaps[i, j, scroll.LVL] && HeightMaps[i, j, scroll.LVL] <= 0.2) {
                 //    colorArray[i + tex.width * j] = Color.blue;
@@ -50,13 +50,13 @@ public class SpriteMaker : MonoBehaviour {
                 //    ;
                 //}
 
-                if (HeightMap[i, j, scroll.LVL] == 1)
+                if (HeightMap[i + scroll.X, j+ scroll.Y, scroll.LVL] == 1)
                 {
-                    colorArray[i + tex.width * j] = Color.green;
+                    colorArray[i + 100 * j] = Color.green;
                 }
                     else
                 {
-                    colorArray[i + tex.width * j] = Color.white;
+                    colorArray[i + 100 * j] = Color.white;
                 }
 
 

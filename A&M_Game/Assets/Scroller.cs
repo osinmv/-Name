@@ -21,10 +21,12 @@ public class Scroller : MonoBehaviour {
 		get{return lvl;}
 
 	}
+
 	public int X
 	{
 		get{ return x;}
 	}
+
 	public int Y
 	{
 		get{ return y;}
@@ -33,8 +35,8 @@ public class Scroller : MonoBehaviour {
 	void Start ()
 	{
 		lvl = 0;
-		x = 0;
-		y = 0;
+		x = 30;
+		y = 30;
 	}
 
 	// Update is called once per frame
@@ -51,17 +53,33 @@ public class Scroller : MonoBehaviour {
 			} 
 			upd = true;
 		}
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			y--;
-		}
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			y++;
-		}
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			x++;
-		}
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			x--;
-		}
+		if (Input.GetKey (KeyCode.DownArrow)) {
+            if (y>0)
+            {
+                y--;
+            }
+            upd = true;
+        }
+		if (Input.GetKey (KeyCode.UpArrow)) {
+            if (y<1499)
+            {
+                y++;
+            }
+            upd = true;
+        }
+		if (Input.GetKey (KeyCode.RightArrow)) {
+            if (x < 1499)
+            {
+                x++;
+            }
+            upd = true;
+        }
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+            if (x >0)
+            {
+                x--;
+            }
+            upd = true;
+        }
 	}
 }

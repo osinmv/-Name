@@ -7,16 +7,16 @@ public class SpriteMaker : MonoBehaviour {
 
     SpriteRenderer rend;
 
-    private int width = 1600;
-    private int height = 1600;
+    private int width = 160;
+    private int height = 160;
     private int depth = 35;
     private float scale = 3;
     private int moveX;
     private int moveY;
     private float[,,] HeightMaps;
     private int[,,] HeightMap;
-    private int LVL = 0;
-    public Scroller scroll = new Scroller();
+    //private int LVL = 0;
+    public Scroller scroll ;
 
     // Use this for initialization
     void Start() {
@@ -111,7 +111,8 @@ public class SpriteMaker : MonoBehaviour {
     private float[,] Generate2DNoise()
     {
         float[,] a = new float[width, height];
-
+		moveX = Random.Range(0, 1000);
+		moveY = Random.Range(0, 1000);
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)

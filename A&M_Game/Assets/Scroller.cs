@@ -6,6 +6,8 @@ public class Scroller : MonoBehaviour {
 
 	private int lvl;
 	private bool upd;
+	private int x;
+	private int y;
 	// Use this for initialization
 
 	public bool UPD
@@ -19,10 +21,20 @@ public class Scroller : MonoBehaviour {
 		get{return lvl;}
 
 	}
+	public int X
+	{
+		get{ return x;}
+	}
+	public int Y
+	{
+		get{ return y;}
+	}
 
 	void Start ()
 	{
 		lvl = 0;
+		x = 0;
+		y = 0;
 	}
 
 	// Update is called once per frame
@@ -38,6 +50,18 @@ public class Scroller : MonoBehaviour {
 				lvl--;
 			} 
 			upd = true;
+		}
+		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+			y--;
+		}
+		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+			y++;
+		}
+		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			x++;
+		}
+		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			x--;
 		}
 	}
 }

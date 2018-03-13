@@ -7,8 +7,8 @@ public class SpriteMaker : MonoBehaviour {
 
     SpriteRenderer rend;
 
-    private int width = 100;
-    private int height = 100;
+    private int width = 1600;
+    private int height = 1600;
     private int depth = 35;
     private float scale = 3;
     private int moveX;
@@ -66,7 +66,7 @@ public class SpriteMaker : MonoBehaviour {
         tex.SetPixels(colorArray);
         tex.Apply();
 
-
+        tex.anisoLevel = 0;
         tex.wrapMode = TextureWrapMode.Clamp;
         tex.filterMode = FilterMode.Point;
         //sprite

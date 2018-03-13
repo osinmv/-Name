@@ -8,7 +8,7 @@ public class Scroller : MonoBehaviour {
 	private bool upd;
 	private int x;
 	private int y;
-	public GameObject Camera;
+
 	// Use this for initialization
 
 	public bool UPD
@@ -42,7 +42,7 @@ public class Scroller : MonoBehaviour {
 	void Update ()
 	{
 		if (Input.GetAxis ("Mouse ScrollWheel") > 0) {
-			if (lvl < 10) {
+			if (lvl < 9) {
 				lvl++;
 			} 
 			upd = true;
@@ -53,7 +53,7 @@ public class Scroller : MonoBehaviour {
 			upd = true;
 		}
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
-			
+			y--;
 		}
 		if (Input.GetKeyDown (KeyCode.UpArrow)) {
 			y++;

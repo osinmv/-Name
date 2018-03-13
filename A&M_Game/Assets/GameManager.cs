@@ -29,10 +29,10 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake()
 	{
+		PlanesMaterial = new MeshRenderer[100, 100];
 		Create10000planes ();
 
-		PlanesMaterial = new MeshRenderer[100, 100];
-		FormArrayOfTiles ();
+
 		Generate3DNoise ();
 	}
 
@@ -42,17 +42,7 @@ public class GameManager : MonoBehaviour {
 	
 	}
 
-	private void FormArrayOfTiles()
-	{
-		int j = 0;
-		for (int i = 0; i < TilesHolder.transform.childCount-1; i++) {
-			PlanesMaterial [i, j] = TilesHolder.transform.GetChild (i).gameObject.GetComponent<MeshRenderer> ();
-			if ((i % 9)==0) {				
-				j++;
-			}
 
-		}
-	}
 
 	private void Create10000planes()
 	{
@@ -60,8 +50,8 @@ public class GameManager : MonoBehaviour {
 			for (int j = 0; j < 100; j++) {
 				obj = Instantiate<GameObject> (plane);
 				obj.transform.SetParent (TilesHolder.transform);
-				obj.transform.position = new Vector2 (i*10, j*10);
-
+				obj.transform.position = new Vector2 (i*10-400, j*10-500);
+				PlanesMaterial [i, j] = obj.GetComponent<MeshRenderer> ();
 			}
 		}
 	}

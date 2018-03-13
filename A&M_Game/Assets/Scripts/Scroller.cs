@@ -1,34 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Scroll : MonoBehaviour {
-
+public class Scroller : MonoBehaviour {
 
 	private int lvl;
 	private bool upd;
 	// Use this for initialization
+
 	public bool UPD
 	{
 		get{return upd; }
 		set{upd = value; }
 	}
+
 	public int LVL
 	{
 		get{return lvl;}
 
 	}
 
-	void Start () {
+	void Start ()
+	{
 		lvl = 5;
-
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		if (Input.GetAxis ("Mouse ScrollWheel") > 0) {
-			if (lvl < 9) {
+			if (lvl < 99) {
 				lvl++;
 			} 
 			upd = true;
@@ -38,8 +39,5 @@ public class Scroll : MonoBehaviour {
 			} 
 			upd = true;
 		}
-
-    }
-
-
+	}
 }

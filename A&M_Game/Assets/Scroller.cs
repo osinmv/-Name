@@ -22,14 +22,14 @@ public class Scroller : MonoBehaviour {
 
 	void Start ()
 	{
-		lvl = 5;
+		lvl = 0;
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
 		if (Input.GetAxis ("Mouse ScrollWheel") > 0) {
-			if (lvl < 99) {
+			if (lvl < 34) {
 				lvl++;
 			} 
 			upd = true;

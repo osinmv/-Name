@@ -16,6 +16,7 @@ public class Character : MonoBehaviour {
 		file = System.IO.File.ReadAllLines ("D:/Git-proj/-Name/-Name-objective/A&M_Game/Assets/Text/Skills.txt");
 		GenerateNewCharacter ();
 
+
 	}
 	public void GenerateNewCharacter()
 	{

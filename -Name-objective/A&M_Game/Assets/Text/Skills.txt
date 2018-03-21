@@ -1,0 +1,9 @@
+Miner
+Woodworker
+StoneWorker
+Farmer
+Fisher
+MetalsWorker
+King
+CraftsMan
+

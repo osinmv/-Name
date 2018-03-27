@@ -1,5 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:-Name-objective/A&M_Game/Assets/Resources/Sprites/0.png.meta
 guid: 6ad7f284a199fda48b03dbc4b896138c
+=======
+guid: ad44040f174b9d34c825f0f924082a38
+timeCreated: 1522009454
+licenseType: Free
+>>>>>>> f6ff157ed97ee9b38c593a484409e0ec885bed0d:-Name-objective/A&M_Game/Assets/Resources/Sprites/7.png.meta
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -74,6 +80,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+<<<<<<< HEAD:-Name-objective/A&M_Game/Assets/Resources/Sprites/0.png.meta
   - buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -94,6 +101,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+=======
+>>>>>>> f6ff157ed97ee9b38c593a484409e0ec885bed0d:-Name-objective/A&M_Game/Assets/Resources/Sprites/7.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []
